@@ -8,6 +8,11 @@ for i in *.CR2; do sips -s format jpeg $i --out "${i%.*}.jpg"; done
 ```
 
 ## Resize Images to max width/height 
+Using Sips
 ```
 for i in *.jpg; do sips -Z 1200 $i"; done
+```
+Using Magick
+```
+magick mogrify -resize 60% *.jpg
 ```
